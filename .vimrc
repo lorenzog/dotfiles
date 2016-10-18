@@ -154,7 +154,7 @@ autocmd BufWritePost *.py call Flake8()
 
 autocmd FileType python :set makeprg=pylint\ --reports=n\ --output-format=parseable\ %:p
 autocmd FileType python :set errorformat=%f:%l:\ %m
-autocmd Filetype python set tabstop=4
+autocmd Filetype python set tabstop=8
 autocmd Filetype python set softtabstop=4
 autocmd Filetype python set shiftwidth=4
 autocmd Filetype python set expandtab		" convert tabs to spaces
