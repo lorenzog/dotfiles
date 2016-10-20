@@ -159,6 +159,7 @@ autocmd Filetype python set softtabstop=4
 autocmd Filetype python set shiftwidth=4
 autocmd Filetype python set expandtab		" convert tabs to spaces
 autocmd Filetype python set shiftround
+autocmd FileType python set grepprg=grep\ -n\ --exclude=*{.pyc,.swp,tags}\ -Er
 
 
 autocmd BufNewFile,BufRead *.notes set syntax=markdown
