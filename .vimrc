@@ -146,8 +146,8 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 " python stuff
 " I normally git clone pathogen in ~lib then symlink to .vim/
-call pathogen#infect()
-call pathogen#helptags()
+autocmd FileType python call pathogen#infect()
+autocmd FileType python call pathogen#helptags()
 autocmd BufWritePost *.py call Flake8()
 "let g:flake8_show_in_file=1  " show marks in file
 "let g:flake8_show_in_gutter=1  " show tips in gutter
