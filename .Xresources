@@ -5,7 +5,8 @@ Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
 urxvt*scrollBar: off
 urxvt*reverseVideo: on
-urxvt*font: 7x14
+urxvt*font: 9x15
+!urxvt*font: 7x14
 urxvt*urgentOnBell: true
 URxvt*color0:  #000000 // black
 URxvt*color1:  #B40000 // red
