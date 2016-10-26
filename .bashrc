@@ -128,8 +128,8 @@ fi
 alias pygrep='grep -n --exclude=*{.pyc,.swp,tags} -Er '
 
 # run tmux by default
-if command -v tmux>/dev/null; then
-    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+# if command -v tmux>/dev/null; then
+#     [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+# fi
 
 test -f "$HOME"/.bashrc_local && source "$HOME"/.bashrc_local
