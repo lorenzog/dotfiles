@@ -3,11 +3,11 @@ Xft.hinting:            1
 Xft.rgba:               rgb
 Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
-urxvt*scrollBar: off
-urxvt*reverseVideo: on
-urxvt*font: 9x15
+URxvt*scrollBar: off
+URxvt*reverseVideo: on
+URxvt*font: 9x15
 !urxvt*font: 7x14
-urxvt*urgentOnBell: true
+URxvt*urgentOnBell: true
 URxvt*color0:  #000000 // black
 URxvt*color1:  #B40000 // red
 URxvt*color2:  #00AA00 // green
