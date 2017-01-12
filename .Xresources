@@ -5,8 +5,8 @@ Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
 URxvt*scrollBar: off
 URxvt*reverseVideo: on
-URxvt*font: 9x15
-!urxvt*font: 7x14
+!URxvt*font: 9x15
+URxvt*font: 7x14
 URxvt*urgentOnBell: true
 URxvt*color0:  #000000 // black
 URxvt*color1:  #B40000 // red
@@ -24,3 +24,4 @@ URxvt*color12: #6464FF // blue
 URxvt*color13: #FF00FF // magenta
 URxvt*color14: #00FFFF // cyan
 URxvt*color15: #FFFFFF // white
+URxvt.perl-ext-common: selection-to-clipboard
