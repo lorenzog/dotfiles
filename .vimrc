@@ -6,7 +6,11 @@ set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=indent,eol,start	" more powerful backspacing
 " Now we set some defaults for the editor 
 set autoindent		" always set autoindenting on
+
+execute pathogen#infect()
+execute pathogen#helptags()
 filetype plugin indent on
+
 " but also
 " set indentkeys-=o
 " (to disable indent on CR
@@ -146,8 +150,6 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 " python stuff
 " I normally git clone pathogen in ~lib then symlink to .vim/
-autocmd FileType python call pathogen#infect()
-autocmd FileType python call pathogen#helptags()
 autocmd BufWritePost *.py call Flake8()
 "let g:flake8_show_in_file=1  " show marks in file
 "let g:flake8_show_in_gutter=1  " show tips in gutter
