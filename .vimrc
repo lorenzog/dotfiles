@@ -163,6 +163,7 @@ autocmd Filetype python set expandtab		" convert tabs to spaces
 autocmd Filetype python set shiftround
 autocmd FileType python set grepprg=grep\ -n\ --exclude=*{.pyc,.swp,tags}\ -Er
 
+autocmd BufNewFile,BufRead *.jsp set syntax=java
 
 autocmd BufNewFile,BufRead *.notes set syntax=markdown
 autocmd BufNewFile,BufRead *.notes set filetype=markdown
