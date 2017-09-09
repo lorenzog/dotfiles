@@ -125,7 +125,7 @@ if [ ! -z "${VIMRUNTIME+x}" ]; then
     PS1="\e[37;1m[$_vim]\e[0m $PS1"
 fi
 
-alias pygrep='grep -n --exclude=*{.pyc,.swp,tags} -Er '
+alias pygrep='grep -n --exclude=*{.pyc,.swp,tags,.sql,.json} -Er '
 
 # run tmux by default
 # if command -v tmux>/dev/null; then
