@@ -8,10 +8,10 @@ set-window-option -g automatic-rename off
 set-option -g allow-rename off
 
 # newer versions
-set -g mouse on
-# set -g mouse-resize-pane on
-# set -g mouse-select-pane on
-# set -g mode-mouse on
+# set -g mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mode-mouse on
 
 # 100 columns for main-vertical
 set -g main-pane-width 100
@@ -22,10 +22,6 @@ bind k select-pane -U
 bind l select-pane -R
 bind-key -r C-h select-window -t :-
 bind-key -r C-l select-window -t :+
-
-# set pane title on top
-set -g pane-border-status top
-set -g pane-border-format "#{pane_index} ${pane_current_path} #{pane_current_command}"
 
 # new pane in current dir! (also swap, to stay on the right)
 bind-key % splitw -h -c "#{pane_current_path}" -p 60 \; swap-pane
@@ -44,3 +40,6 @@ set -g status-left ""
 set -g status-right "#[fg=green]#H"
 
 # bind PageUp copy-mode -eu
+
+# copy into X clipboard
+bind-key -t vi-copy y copy-pipe "xclip -selection clipboard"

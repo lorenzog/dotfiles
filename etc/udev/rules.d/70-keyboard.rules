@@ -1,0 +1,2 @@
+# Das Keyboard
+ACTION="add", ATTRS{idVendor}=="24f0", ATTRS{idProduct}=="0142", ENV{XAUTHORITY}="/home/user/.Xauthority", ENV{DISPLAY}=":0", OWNER="user", RUN+="/home/user/bin/normalkeyboard.sh"
