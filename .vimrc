@@ -181,3 +181,5 @@ au BufRead,BufNewFile *.pde set syntax=arduino
 au BufRead,BufNewFile *.md setlocal textwidth=72
 au BufRead,BufNewFile *.rst setlocal textwidth=72
 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
