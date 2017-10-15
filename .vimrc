@@ -184,4 +184,5 @@ au BufRead,BufNewFile *.rst setlocal textwidth=72
 " shut up
 set visualbell
 set vb t_vb=     " no visual bell & flash
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
