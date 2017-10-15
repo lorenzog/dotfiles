@@ -181,3 +181,7 @@ au BufRead,BufNewFile *.pde set syntax=arduino
 au BufRead,BufNewFile *.md setlocal textwidth=72
 au BufRead,BufNewFile *.rst setlocal textwidth=72
 
+" shut up
+set visualbell
+set vb t_vb=     " no visual bell & flash
+
