@@ -1,0 +1,112 @@
+# Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+
+   [submenu] (Applications) {}
+      [submenu] (Accessibility) {}
+         [exec] (Xmag) {xmag} <>
+      [end]
+      [submenu] (Data Management) {}
+         [exec] (Innotop) { x-terminal-emulator -T "Innotop" -e /usr/bin/innotop} <>
+      [end]
+      [submenu] (Editors) {}
+         [exec] (Xedit) {xedit} <>
+      [end]
+      [submenu] (Emulators) {}
+         [exec] (VirtualBox) {/usr/bin/virtualbox} </usr/share/pixmaps/virtualbox.xpm>
+      [end]
+      [submenu] (File Management) {}
+         [exec] (ROX Filer) {/usr/bin/rox} <>
+         [exec] (Xfdesktop) {xfdesktop} <>
+      [end]
+      [submenu] (Graphics) {}
+         [exec] (X Window Snapshot) {xwd | xwud} <>
+      [end]
+      [submenu] (Network) {}
+         [submenu] (Communication) {}
+            [exec] (Manhole Twisted Client) {/usr/bin/manhole} <>
+            [exec] (Telnet) { x-terminal-emulator -T "Telnet" -e /usr/bin/telnet.netkit} <>
+            [exec] (Twisted Application Generator) {/usr/bin/tkmktap} <>
+            [exec] (Xbiff) {xbiff} <>
+            [exec] (xtightvncviewer) {/usr/bin/xtightvncviewer} <>
+         [end]
+         [submenu] (File Transfer) {}
+            [exec] (cadaver) { x-terminal-emulator -T "cadaver" -e /usr/bin/cadaver} <>
+         [end]
+         [submenu] (Monitoring) {}
+            [exec] (btscanner) { x-terminal-emulator -T "btscanner" -e /usr/bin/btscanner} <>
+            [exec] (Driftnet) {/usr/bin/driftnet} <>
+            [exec] (ettercap (as root\)) {ettercap-pkexec -G} <>
+         [end]
+         [submenu] (Web Browsing) {}
+            [exec] (Google Chrome) {/opt/google/chrome/google-chrome} </opt/google/chrome/product_logo_32.xpm>
+         [end]
+      [end]
+      [submenu] (Programming) {}
+         [exec] (Erlang Shell) { x-terminal-emulator -T "Erlang Shell" -e /usr/bin/erl} </usr/share/pixmaps/erlang.xpm>
+         [exec] (GDB) { x-terminal-emulator -T "GDB" -e /usr/bin/gdb} <>
+         [exec] (Tclsh8.6) { x-terminal-emulator -T "Tclsh8.6" -e /usr/bin/tclsh8.6} <>
+         [exec] (TkWish8.5) {x-terminal-emulator -e /usr/bin/wish8.5} <>
+         [exec] (TkWish8.6) {x-terminal-emulator -e /usr/bin/wish8.6} <>
+      [end]
+      [submenu] (Science) {}
+         [submenu] (Mathematics) {}
+            [exec] (Bc) { x-terminal-emulator -T "Bc" -e /usr/bin/bc} <>
+            [exec] (Xcalc) {xcalc} <>
+         [end]
+      [end]
+      [submenu] (Shells) {}
+         [exec] (Bash) { x-terminal-emulator -T "Bash" -e /bin/bash --login} <>
+         [exec] (Dash) { x-terminal-emulator -T "Dash" -e /bin/dash -i} <>
+         [exec] (Sh) { x-terminal-emulator -T "Sh" -e /bin/sh --login} <>
+         [exec] (Zsh) { x-terminal-emulator -T "Zsh" -e /bin/zsh} <>
+      [end]
+      [submenu] (Sound) {}
+         [exec] (pavucontrol) {/usr/bin/pavucontrol} <>
+      [end]
+      [submenu] (System) {}
+         [submenu] (Administration) {}
+            [exec] (Debian Task selector) { x-terminal-emulator -T "Debian Task selector" -e su-to-root -c tasksel} <>
+            [exec] (Editres) {editres} <>
+            [exec] (fbpanel) {/usr/bin/fbpanel} <>
+            [exec] (GNOME partition editor) {su-to-root -X -c /usr/sbin/gparted} </usr/share/pixmaps/gparted.xpm>
+            [exec] (idesk) {/usr/bin/idesk} <>
+            [exec] (Xclipboard) {xclipboard} <>
+            [exec] (Xfce Application Finder) {xfce4-appfinder} </usr/share/pixmaps/xfce4-appfinder.xpm>
+            [exec] (Xfontsel) {xfontsel} <>
+            [exec] (Xkill) {xkill} <>
+            [exec] (Xrefresh) {xrefresh} <>
+         [end]
+         [submenu] (Hardware) {}
+            [exec] (Xvidtune) {xvidtune} <>
+         [end]
+         [submenu] (Monitoring) {}
+            [exec] (GKrellM) {/usr/bin/gkrellm} </usr/share/pixmaps/gkrellm.xpm>
+            [exec] (Pstree) { x-terminal-emulator -T "Pstree" -e /usr/bin/pstree.x11} </usr/share/pixmaps/pstree16.xpm>
+            [exec] (Top) { x-terminal-emulator -T "Top" -e /usr/bin/top} <>
+            [exec] (wmbattery) {wmbattery} <>
+            [exec] (Xconsole) {xconsole -file /dev/xconsole} <>
+            [exec] (Xev) {x-terminal-emulator -e xev} <>
+            [exec] (Xload) {xload} <>
+         [end]
+      [end]
+      [submenu] (Terminal Emulators) {}
+         [exec] (X-Terminal as root (GKsu\)) {/usr/bin/gksu -u root /usr/bin/x-terminal-emulator} </usr/share/pixmaps/gksu-debian.xpm>
+      [end]
+      [submenu] (Viewers) {}
+         [exec] (Xditview) {xditview} <>
+      [end]
+   [end]
+   [submenu] (Games) {}
+      [submenu] (Toys) {}
+         [exec] (Oclock) {oclock} <>
+         [exec] (Xclock (analog\)) {xclock -analog} <>
+         [exec] (Xclock (digital\)) {xclock -digital -update 1} <>
+         [exec] (Xeyes) {xeyes} <>
+         [exec] (Xlogo) {xlogo} <>
+      [end]
+   [end]
+   [submenu] (Help) {}
+      [exec] (Xman) {xman} <>
+   [end]
+   [submenu] (Window Managers) {}
+      [restart] (FluxBox)  {/usr/bin/startfluxbox}
+   [end]

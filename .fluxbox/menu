@@ -1,0 +1,7 @@
+[begin] (fluxbox)
+[exec] (Term) {/usr/bin/urxvt}
+[exec] (Chrome) {/usr/bin/google-chrome}
+[exec] (Firefox) {/usr/bin/firefox}
+[exec] (VMWare) {/usr/bin/vmplayer}
+[include] (/etc/X11/fluxbox/fluxbox-menu)
+[end]
