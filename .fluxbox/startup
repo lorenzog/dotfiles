@@ -9,7 +9,13 @@ xmodmap "/home/user/.Xmodmap"
 
 # to the slit
 fbpager -w &
+# 0ld sk00l
 gkrellm &
+# controls screen temperature
+redshift -l geoclue2 &
+# don't create a new one on startup, hide all
+xpad -N -h &
+
 
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
