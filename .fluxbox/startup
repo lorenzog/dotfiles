@@ -8,9 +8,9 @@
 xmodmap "/home/user/.Xmodmap"
 
 # to the slit
-fbpager -w &
+# fbpager -w &
 # 0ld sk00l
-gkrellm &
+gkrellm -w &
 # controls screen temperature
 redshift -l geoclue2 &
 # don't create a new one on startup, hide all

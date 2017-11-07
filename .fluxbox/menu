@@ -4,4 +4,6 @@
 [exec] (Firefox) {/usr/bin/firefox}
 [exec] (VMWare) {/usr/bin/vmplayer}
 [include] (/etc/X11/fluxbox/fluxbox-menu)
+[nop]
+[exec] (Suspend) {sudo echo mem > /sys/power/state}
 [end]
