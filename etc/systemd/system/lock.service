@@ -1,0 +1,12 @@
+# DOES NOT WORK. I don't know why. Systemd really sucks.
+[Unit]
+Description=Lock the screen on resume from suspend
+
+[Service]
+User=user
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/slock
+
+[Install]
+WantedBy=suspend.target
+

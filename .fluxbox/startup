@@ -15,6 +15,9 @@ gkrellm -w &
 redshift -l geoclue2 &
 # don't create a new one on startup, hide all
 xpad -N -h &
+guake &
+# only decent way with systemd apparently.
+xss-lock slock &
 
 
 # Applications you want to run with fluxbox.
