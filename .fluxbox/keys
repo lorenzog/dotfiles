@@ -80,7 +80,9 @@ Mod1 36 :Exec urxvt
 
 # open the window menu
 # Mod1 space :WindowMenu
-Mod1 space :Exec j4-dmenu-desktop
+# Mod1 space :Exec j4-dmenu-desktop --display-binary --dmenu="dmenu -i -p \> -l 3"
+Mod1 space :Exec j4-dmenu-desktop --display-binary --dmenu="rofi -dmenu -i"
+Control space :Exec rofi -show ssh
 
 # exit fluxbox
 Control Mod1 Delete :Exit

@@ -1,0 +1,12 @@
+#!/bin/bash
+# DOES NOT WORK -- the script runs except for the locking part. Boy how much
+# does systemd suck
+# echo "$*"
+
+case $1 in
+  pre)
+    # DISPLAY=:0 /usr/bin/xtrlock
+    /usr/bin/xscreensaver-command -lock 2>> /tmp/lock.out
+    # echo "pre running" >> /tmp/lock.out
+    ;;
+esac
