@@ -6,6 +6,7 @@
 
 # Change your keymap:
 xmodmap "/home/user/.Xmodmap"
+~/bin/trackpad.sh
 
 # to the slit
 # fbpager -w &
