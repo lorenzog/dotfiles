@@ -113,6 +113,8 @@ set completion-ignore-case on
 # sudo path!!
 #alias sudo='sudo env PATH=$PATH'
 
+test -d "${HOME}"/bin && export PATH=${PATH}:${HOME}/bin
+
 export PATH=${PATH}:${HOME}/.local/bin
 
 alias svnvim='svn diff --diff-cmd "${HOME}"/bin/diffwrap.sh'
