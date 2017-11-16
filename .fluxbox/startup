@@ -9,7 +9,7 @@ xmodmap "/home/user/.Xmodmap"
 ~/bin/trackpad.sh
 
 # to the slit
-# fbpager -w &
+fbpager &
 # 0ld sk00l
 gkrellm -w &
 # controls screen temperature
