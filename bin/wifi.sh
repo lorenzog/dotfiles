@@ -1,0 +1,1 @@
+/home/user/my-kali/bin/wifi.sh

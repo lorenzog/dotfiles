@@ -19,7 +19,7 @@ session.screen0.toolbar.layer:	Dock
 session.screen0.toolbar.maxOver:	false
 session.screen0.toolbar.height:	0
 session.screen0.toolbar.placement:	BottomCenter
-session.screen0.toolbar.tools:	prevworkspace, workspacename, nextworkspace, clock, prevwindow, nextwindow, iconbar, systemtray
+session.screen0.toolbar.tools:	iconbar, systemtray, clock
 session.screen0.toolbar.alpha:	255
 session.screen0.toolbar.onhead:	1
 session.screen0.toolbar.visible:	true
@@ -45,7 +45,7 @@ session.screen0.tooltipDelay:	500
 session.screen0.noFocusWhileTypingDelay:	0
 session.screen0.windowPlacement:	RowMinOverlapPlacement
 session.screen0.workspaces:	6
-session.screen0.strftimeFormat:	%d %b, %a %02k:%M:%S
+session.screen0.strftimeFormat:	%a %b %d %02k:%M
 session.screen0.menuDelay:	200
 session.screen0.autoRaise:	false
 session.screen0.maxIgnoreIncrement:	true
