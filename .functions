@@ -1,0 +1,20 @@
+# vi: ft=sh
+amiroot() {
+	test $(id -u) -eq 0
+	return $?
+}
+
+say() {
+	# first choice: notify-send
+	# if present
+	# if not present, use echo
+	# check stdin is opened on a terminal
+	NOTIFY_WITH=$(test -t 0 || command -v notify-send && command -v echo)
+	# NOTIFY_WITH=$(command -v notify-send || 'echo')
+	test -n "$1" && "$NOTIFY_WITH" "$1"
+}
+
+die() {
+	say "$1"
+	exit 1
+}
