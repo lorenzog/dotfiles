@@ -1,0 +1,137 @@
+###
+# Random notes for UNIX
+
+# debian
+update-alternatives --get-selections
+
+# systemd reload /etc/systemd/logind.conf
+systemctl restart systemd-loging.service
+
+# find full path of executable, built-in
+command -v
+
+
+###
+# crypto, ssl
+
+cryptsetup luksOpen /dev/sdb1 foo
+mount /dev/mapper/foo
+
+encrypt file symmetric with gpg:
+gpg --output encrypted.data --symmetric --cipher-algo AES256 un_encrypted.data
+gpg --output un_encrypted.data --decrypt encrypted.data
+
+with openssl:
+openssl aes-256-cbc -a -salt -in secrets.txt -out secrets.txt.enc
+openssl aes-256-cbc -d -a -in secrets.txt.enc -out secrets.txt.new
+
+# openssl
+# gen key and cert
+openssl req -x509 -newkey rsa:2048 -nodes -subj "/CN=localhost" -keyout key.pem -out cert.pem -days 365
+# make into single file
+ cat key.pem cert.pem >> foo.crt
+
+#
+###
+
+###
+# vi
+
+# insert current date/time in VI
+# pu=strftime('%c') 
+
+vim reload
+:so ~/.vimrc
+
+#
+vi register
+"<NAME>op
+e.g. "add > deletes line into register 'a'
+"_dd > deletes line into the black hole register _
+
+tcomment vim
+gcc comment line
+gcip comment current paragraph
+
+#
+###
+
+# sudo across terminals
+# http://unix.stackexchange.com/questions/164937/open-a-new-bash-with-sudo-powers-without-reentering-the-password
+Defaults	!tty_tickets
+xrdb -merge .Xresources
+
+# set the screen size
+xrandr --fbmm 374x228
+
+# brightness
+xbacklight -set <percentage> or = <percentage> 
+xcalib -co (dim percentage) -a
+xcalib -clear
+sudo tpconfig -t 1
+
+xinput list
+# find mouse
+xinput list-props "AlpsPS/2 ALPS GlidePoint"
+# find finger
+xinput set-prop "AlpsPS/2 ALPS GlidePoint" "Synaptics Finger" 15 30 0
+xinput set-prop "AlpsPS/2 ALPS GlidePoint" "Synaptics Two-Finger Pressure" 200
+
+# get keystrokes
+xev
+evtest # shows events (mouse, etc.)
+
+xrandr --output HDMI1 --auto
+xrandr --output HDMI1 --above eDP1
+
+###
+# Virtualbox
+# vbox soft link
+VBoxManage setextradata "Databridge Centos 6.5" VBoxInternal2/SharedFoldersEnableSymlinksCreate/dev 1
+# vbox hard link
+VBoxManage setextradata "Databridge v4 RPM Building" VBoxInternal2/SharedFoldersEnableHardlinksCreate/dev 1
+
+VBoxManage showhdinfo HD.vdi
+VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB 
+
+#
+###
+
+# just mouse, no gestures/scrolling 
+# https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1258837
+modprobe psmouse proto=imps
+# see also https://bugs.launchpad.net/ubuntu/+source/linux-source-2.6.15/+bug/39315
+# also use rate=40
+# or notsc (kernel param, at boot)
+
+# sudo with user's local path
+alias sudo='sudo env PATH=$PATH'
+
+# concatenation
+echo "something" | cat <(echo "prefix") <(cat -) <(echo "postfix")
+
+# python slice
+s='abcd'
+n=3
+[s[i:i+n] for i in range(0, len(s), n)]
+# result:
+# ['abc', 'd']
+
+
+# sort by IP address
+sort -V
+
+# show IP
+ip addr show dev tap0 | grep -Po 'inet \K[\d.]+'
+
+# gsettings reset org.gnome.system.proxy.socks host
+chromium --proxy-server="socks://127.0.0.1:1080"
+# reset firefox: ctrl-shift-delete
+
+# check for sudo without password (if config by default)
+sudo -v
+sudo -l ## list commands
+
+# clean ansi colours
+sed 's/\x1b\[[0-9;]*m//g'
+

@@ -1,0 +1,11 @@
+# Hints for sudo.
+# You really thought I put my sudoers on github? LOL
+#
+# Timeout a root login after
+Defaults	passwd_timeout=7
+# 
+Defaults	timestamp_timeout=15
+Defaults	!tty_tickets
+# superceded by:
+Defaults	timestamp_type=ppid
+Defaults	lecture=never
