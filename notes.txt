@@ -135,3 +135,7 @@ sudo -l ## list commands
 # clean ansi colours
 sed 's/\x1b\[[0-9;]*m//g'
 
+
+# disable automount
+gsettings set org.gnome.desktop.media-handling automount-open false
+gsettings set org.gnome.desktop.media-handling automount false
