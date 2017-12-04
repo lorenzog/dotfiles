@@ -16,3 +16,4 @@ fbpager
 rxvt-unicode-256color
 tmux
 shutter
+ssh-askpass
