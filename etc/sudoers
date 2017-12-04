@@ -5,7 +5,7 @@
 Defaults	passwd_timeout=7
 # 
 Defaults	timestamp_timeout=15
-Defaults	!tty_tickets
+# Defaults	!tty_tickets
 # superceded by:
-Defaults	timestamp_type=ppid
+Defaults	timestamp_type=global
 Defaults	lecture=never
