@@ -19,6 +19,9 @@ xpad -N -h &
 guake &
 # only decent way with systemd apparently.
 xss-lock slock &
+# screenshotting
+shutter --min_at_startup &
+nm-applet &
 
 
 # Applications you want to run with fluxbox.
