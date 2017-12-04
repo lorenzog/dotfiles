@@ -136,4 +136,4 @@ alias pygrep='grep -n --exclude=*{.pyc,.swp,tags,.sql,.json} -Er '
 
 test -f "$HOME"/.bashrc_local && source "$HOME"/.bashrc_local
 
-SUDO_ASKPASS=/usr/bin/ssh-askpass
+export SUDO_ASKPASS=/usr/bin/ssh-askpass
