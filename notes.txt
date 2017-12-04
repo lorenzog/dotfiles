@@ -69,6 +69,8 @@ xbacklight -set <percentage> or = <percentage>
 xcalib -co (dim percentage) -a
 xcalib -clear
 sudo tpconfig -t 1
+xrandr --output OUTPUT --brightness 0.x
+# key: XF86MonBrightnessUp XF86MonBrightnessDown
 
 xinput list
 # find mouse

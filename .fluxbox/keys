@@ -155,3 +155,8 @@ Shift Mod1 6 :SendToWorkspace 6
 
 Mod4 L :Exec xtrlock
 Mod4 t :ToggleDecor
+
+# first '0' is for first output: HDMI audio
+# XF86AudioMute :Exec pactl set-sink-mute 0 1
+# built-in audio
+#XF86AudioMute :Exec pactl set-sink-mute 1 1

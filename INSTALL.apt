@@ -1,5 +1,18 @@
 xserver-xorg-input-synaptics
-xfce4 xorg-docs audacious
-j4-dmenu-desktop rofi rox-filer xtrlock
-gkrellm redshift xpad guake xss-lock
-fluxbox fbpager rxvt-unicode-256color tmux
+xfce4
+xorg-docs
+audacious
+j4-dmenu-desktop
+rofi
+rox-filer
+xtrlock
+gkrellm
+redshift
+xpad
+guake
+xss-lock
+fluxbox
+fbpager
+rxvt-unicode-256color
+tmux
+shutter
