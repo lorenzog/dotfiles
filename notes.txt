@@ -78,6 +78,8 @@ xinput list-props "AlpsPS/2 ALPS GlidePoint"
 # find finger
 xinput set-prop "AlpsPS/2 ALPS GlidePoint" "Synaptics Finger" 15 30 0
 xinput set-prop "AlpsPS/2 ALPS GlidePoint" "Synaptics Two-Finger Pressure" 200
+# set speed for wi-fi mouse
+xinput set-prop 14 318 -0.8
 
 # get keystrokes
 xev
