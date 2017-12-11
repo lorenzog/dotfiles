@@ -1,8 +1,8 @@
 fbpager.alpha: 255
 fbpager.x: 0
 fbpager.y: 0
-fbpager.workspace.width: 24
-fbpager.workspace.height: 24
+fbpager.workspace.width: 20
+fbpager.workspace.height: 18
 fbpager.workspacesPerRow: 99
 fbpager.layer: top
 fbpager.followDrag: false
