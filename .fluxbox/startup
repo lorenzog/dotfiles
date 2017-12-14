@@ -21,7 +21,9 @@ guake &
 xss-lock slock &
 # screenshotting
 shutter --min_at_startup &
-nm-applet &
+
+# network manager is a piece of crap
+# nm-applet &
 
 
 # Applications you want to run with fluxbox.

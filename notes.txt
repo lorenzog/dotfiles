@@ -143,3 +143,5 @@ sed 's/\x1b\[[0-9;]*m//g'
 # disable automount
 gsettings set org.gnome.desktop.media-handling automount-open false
 gsettings set org.gnome.desktop.media-handling automount false
+
+systemctl list-units --state=failed
