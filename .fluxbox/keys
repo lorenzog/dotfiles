@@ -153,7 +153,7 @@ Shift Mod1 6 :SendToWorkspace 6
 # Control Mod4 F11 :TakeToWorkspace 11
 # Control Mod4 F12 :TakeToWorkspace 12
 
-Mod4 L :Exec xtrlock
+Mod4 L :Exec xscreensaver-command -lock
 Mod4 t :ToggleDecor
 
 # first '0' is for first output: HDMI audio

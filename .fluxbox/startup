@@ -18,7 +18,7 @@ redshift -l geoclue2 &
 xpad -N -h &
 guake &
 # only decent way with systemd apparently.
-xss-lock slock &
+xss-lock xscreensaver-command -demo &
 # screenshotting
 shutter --min_at_startup &
 
