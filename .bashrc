@@ -137,3 +137,17 @@ alias pygrep='grep -n --exclude=*{.pyc,.swp,tags,.sql,.json} -Er '
 test -f "$HOME"/.bashrc_local && source "$HOME"/.bashrc_local
 
 export SUDO_ASKPASS=/usr/bin/ssh-askpass
+
+# from https://unix.stackexchange.com/a/169423
+# save previous location:
+# for the meaning of <>
+# https://unix.stackexchange.com/a/164394
+cd $(<>/dev/shm/$USER-pwd)
+__cd(){
+    # use \cd to avoid a fork bomb
+    \cd "$@"
+    pwd >/dev/shm/$USER-pwd
+}
+alias cd=__cd
+# open in previous location
+cd $(cat /dev/shm/$USER-pwd)
