@@ -150,4 +150,4 @@ __cd(){
 }
 alias cd=__cd
 # open in previous location
-cd $(cat /dev/shm/$USER-pwd)
+cd "$(cat /dev/shm/$USER-pwd)"
