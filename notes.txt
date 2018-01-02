@@ -145,3 +145,4 @@ gsettings set org.gnome.desktop.media-handling automount-open false
 gsettings set org.gnome.desktop.media-handling automount false
 
 systemctl list-units --state=failed
+journalctl --list-boots

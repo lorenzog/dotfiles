@@ -3,3 +3,4 @@
 synclient TapButton1=1
 # self-explanatory
 synclient CircularScrolling=1
+# synclient BottomEdge=1500
