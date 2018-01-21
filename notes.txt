@@ -146,3 +146,17 @@ gsettings set org.gnome.desktop.media-handling automount false
 
 systemctl list-units --state=failed
 journalctl --list-boots
+
+# see mouse position
+evtest
+# then man 4 synaptics
+
+# for :i386 packages
+dpkg --add-architecture i386
+apt-get update
+
+# docker X apps
+# https://stackoverflow.com/questions/16296753/can-you-run-gui-apps-in-a-docker-container
+apt-get install x11vnc xvfb
+# then
+# x11vnc -storepassword .... 
