@@ -1,38 +1,12 @@
-?
-Style * grabFocus
-Style * GrabFocusOn
-Style * GrabFocusOff
-Style * GrabFocus
-Silent Key L A Super_R Exec exec xcreensaver-command -lock
-Silent Key L A Super_ Exec exec xcreensaver-command -lock
-Silent Key L A Super_ Exec exec xcreensaver-command -lock
-Silent Key L A Super_R -
-Silent Key l A Super_L Exec exec xcreensaver-command -lock
-Silent Key l A Super_R Exec exec xcreensaver-command -lock
-Silent Key L A Super_R -
-Silent Key L A Super_L Exec exec xcreensaver-command -lock
-Mouse 2 W M Resize
-Mouse 2 A M Resize
-EdgeResisstance scrolling
 EdgeResistance scrolling
-EdgeResistance scrolling moving
-EdgeResistance 0
-EdgeResistance scrolling moving xinerama-scrolling
-EdgeResistance 10
-EdgeResistance 30
-Mouse 2 W M Resize
-Mouse 3 W M Resize
-Mouse 3 W M RaiseMove Resize
-EdgeScroll 70000p 70000p
-EdgeScroll 7000p 7000p
-EdgeScroll 7000 7000
-EdgeScroll 70000 70000
-EdgeScroll 700 700
+EdgeResistance movement
+EdgeResistance 0 0
+EdgeThickness 2
+EdgeThickness 30
+EdgeThickness 1
+EdgeScroll 10 10
+EdgeScroll 5 5 
+EdgeScroll 1 1
+EdgeScroll 3 3
+EdgeScroll 30p 30p
 EdgeScroll 70p 70p
-EdgeScroll 70p 70p wrap
-EdgeScroll 70p 70p wrapx
-EdgeScroll 70p 70p 
-EdgeScroll 30p 30p 
-EdgeScroll 10p 10p
-EdgeScroll 20p 20p
-EdgeScroll 35p 35p
