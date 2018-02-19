@@ -18,7 +18,7 @@ hi Cursor                         guifg=Black      guibg=#FFBF00
 hi Normal      ctermfg=Grey       guifg=#A4A090    guibg=Black        ctermbg=Black
 hi Visual                         guifg=Black      guibg=#C4C090      gui=NONE
 
-hi Comment     ctermfg=DarkGreen  guifg=DarkGreen
+hi Comment     ctermfg=DarkGreen  guifg=Green
 hi Constant    ctermfg=Red        guifg=Red
 hi Special     ctermfg=DarkRed    guifg=DarkRed
 hi Identifier  ctermfg=Cyan       guifg=Cyan

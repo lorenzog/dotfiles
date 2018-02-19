@@ -181,8 +181,12 @@ au BufRead,BufNewFile *.pde set syntax=arduino
 au BufRead,BufNewFile *.md setlocal textwidth=72
 au BufRead,BufNewFile *.rst setlocal textwidth=72
 
+au BufRead,BufNewfile *.mdown setlocal tabstop=4 expandtab
+
 " shut up
 set visualbell
 set vb t_vb=     " no visual bell & flash
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+au BufRead,BufNewFile *.aspx,*.asmx,*.ascx      set filetype=aspnet
 
