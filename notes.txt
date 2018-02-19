@@ -160,3 +160,12 @@ apt-get update
 apt-get install x11vnc xvfb
 # then
 # x11vnc -storepassword .... 
+
+# docker cleanup
+# from: https://gist.github.com/bastman/5b57ddb3c11942094f8d0a97d461b430
+docker container prune
+docker image prune
+docker network prune
+docker volume prune
+# or
+docker system prune
