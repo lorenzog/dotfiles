@@ -1,8 +1,10 @@
 [app] (name=fbrun)
-	[Position]	(WINCENTER)	{0 0}
-	[Layer]	{2}
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
 [end]
-
 [app] (name=fbpager)
-	[Deco] {NONE}
+  [Deco]	{NONE}
+[end]
+[app] (name=gnome-calendar) (class=Gnome-calendar)
+  [Close]	{yes}
 [end]

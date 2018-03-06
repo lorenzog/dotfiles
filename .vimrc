@@ -108,9 +108,9 @@ set statusline=%F\ [%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
 " wow: http://nvie.com/posts/how-i-boosted-my-vim/
 let mapleader=","
-set list
-" highlight trailing spaces, etc.
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" listchars: shows invisible characters
+set nolist
 " but not in xml
 "autocmd filetype html,xml set listchars-=tab:>.
 
@@ -162,6 +162,9 @@ autocmd Filetype python set shiftwidth=4
 autocmd Filetype python set expandtab		" convert tabs to spaces
 autocmd Filetype python set shiftround
 autocmd FileType python set grepprg=grep\ -n\ --exclude=*{.pyc,.swp,tags}\ -Er
+" highlight trailing spaces, etc.
+autocmd FileType python set list
+autocmd FileType python set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 autocmd BufNewFile,BufRead *.jsp set syntax=java
 
