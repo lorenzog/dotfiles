@@ -172,3 +172,15 @@ docker system prune
 
 # fvwm
 All MoveToScreen
+
+# add default route for multiple vpn
+DEST=$(dig +short vpn-dest)
+# if it's not set, then
+if [ -z "$DEST" ] ; then
+	echo "Cannot resolve $DEST"
+	exit 1
+fi
+# delete and add
+ip route del "$DEST"/32
+ip route add "$DEST"/32 via $(ip route | awk '/default/ { print $3} ')
+

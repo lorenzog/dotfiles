@@ -160,10 +160,7 @@ AddToFunc   ChangeDesk
 #   +---+---+
 #
 DesktopName 0 Main
-DesktopName 1 Desk1
-DesktopName 2 Desk2
-DesktopName 3 Desk3
-DesktopSize 2x2
+DesktopSize 3x3
 
 # EdgeScroll will move the view port between the Pages when the mouse
 # moves to the edge of the screen. This set the amount of distance to
@@ -171,10 +168,10 @@ DesktopSize 2x2
 # for how long the mouse as at the edge before it scrolls.
 #
 # Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
-# EdgeScroll 100 100
-# EdgeResistance 450
-EdgeScroll 70p 70p
-EdgeResistance scrolling
+EdgeScroll 100 100
+EdgeResistance 1000
+# EdgeScroll 70p 70p
+# EdgeResistance scrolling
 EdgeThickness 1
 # Style * EdgeMoveDelay 0, EdgeMoveResistance 350
 Style * EdgeMoveDelay scrolling
@@ -224,7 +221,7 @@ Style * BorderColorset 3, HilightBorderColorset 4
 
 # Disable Icons from appearing on desktop.
 # Comment this out or use Style * Icon to get the icons back.
-Style * !Icon
+#Style * !Icon
 
 # Window Specific Styles
 Style RightPanel !Title, !Borders, !Handles, Sticky, \
