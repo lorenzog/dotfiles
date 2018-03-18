@@ -28,6 +28,8 @@ openssl aes-256-cbc -d -a -in secrets.txt.enc -out secrets.txt.new
 # openssl
 # gen key and cert
 openssl req -x509 -newkey rsa:2048 -nodes -subj "/CN=localhost" -keyout key.pem -out cert.pem -days 365
+# gen csr
+openssl x509 -x509toreq -in cert.pem -out CSR.csr -signkey key.pem
 # make into single file
  cat key.pem cert.pem >> foo.crt
 
