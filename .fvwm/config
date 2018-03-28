@@ -464,6 +464,10 @@ Silent Key F2 A C GotoDesk 0 1
 Silent Key F3 A C GotoDesk 0 2
 Silent Key F4 A C GotoDesk 0 3
 # Silent Key Super_R A A Exec exec $[infostore.terminal]
+Silent Key Right A M GotoPage 1p 0p
+Silent Key Left A M GotoPage -1p 0p
+Silent Key Up A M GotoPage 0p -1p
+Silent Key Down A M GotoPage 0p 1p
 
 # Key [window] keyname context modifiers function
 # context: R (root window)

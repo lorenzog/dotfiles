@@ -154,6 +154,7 @@ __cd(){
     pwd >/dev/shm/$USER-pwd
 }
 alias cd=__cd
+alias yolo='sudo'
 # open in previous location
 cd "$(cat /dev/shm/$USER-pwd)"
 
