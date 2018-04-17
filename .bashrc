@@ -119,18 +119,18 @@ export PATH=${PATH}:${HOME}/.local/bin
 
 alias svnvim='svn diff --diff-cmd "${HOME}"/bin/diffwrap.sh'
 
-PS1="\e]2;\u@\h:\w\a"
+XTERM_TITLE="\e]2;\u@\h:\w\a"
 # colours
 if [ ! -z "${DEMO}" ] ; then
-	PS1+="\u\e[37;1m@\e[0m\h:\w\n [$DEMO] \\$ "
+	PS1="$XTERM_TITLE\u\e[37;1m@\e[0m\h:\w\n [$DEMO] \\$ "
 else
-	PS1+="\u\e[37;1m@\e[0m\h:\w\n   \\$ "
+	PS1="$XTERM_TITLE\u\e[37;1m@\e[0m\h:\w\n   \\$ "
 fi
 
 # when using :sh in vim, make it clear
 if [ ! -z "${VIMRUNTIME+x}" ]; then
     _vim=$(basename "${VIMRUNTIME}")
-    PS1="\e[37;1m[$_vim]\e[0m $PS1"
+    PS1="$XTERM_TITLE\e[37;1m[$_vim]\e[0m $PS1"
 fi
 
 alias pygrep='grep -n --exclude=*{.pyc,.swp,tags,.sql,.json} -Er '
