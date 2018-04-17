@@ -546,6 +546,7 @@ ButtonStyle 6 - MwmDecorMin
 ############
 # 7: Modules
 #############
+Module FvwmCommandS
 
 # FvwmIdent
 #
