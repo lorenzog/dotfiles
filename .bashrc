@@ -119,11 +119,12 @@ export PATH=${PATH}:${HOME}/.local/bin
 
 alias svnvim='svn diff --diff-cmd "${HOME}"/bin/diffwrap.sh'
 
+PS1="\e]2;\u@\h:\w\a"
 # colours
 if [ ! -z "${DEMO}" ] ; then
-	PS1="\u\e[37;1m@\e[0m\h:\w\n [$DEMO] \\$ "
+	PS1+="\u\e[37;1m@\e[0m\h:\w\n [$DEMO] \\$ "
 else
-	PS1="\u\e[37;1m@\e[0m\h:\w\n   \\$ "
+	PS1+="\u\e[37;1m@\e[0m\h:\w\n   \\$ "
 fi
 
 # when using :sh in vim, make it clear
