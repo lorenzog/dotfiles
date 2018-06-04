@@ -474,6 +474,7 @@ Silent Key Down A M GotoPage 0p 1p
 Silent Key Space A M Exec exec j4-dmenu-desktop --display-binary --dmenu="rofi -p '> ' -dmenu -i"
 Silent Key Return A M Exec exec x-terminal-emulator
 Silent Key x A M Exec exec xscreensaver-command -lock
+Silent Key z A M Exec exec xtrlock
 # Mouse [(window)] Button Context Modifiers Function
 Mouse 1 W M RaiseMove Move
 Mouse 3 W M RaiseMove Resize
