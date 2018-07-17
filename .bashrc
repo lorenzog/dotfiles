@@ -124,7 +124,7 @@ XTERM_TITLE="\e]2;\u@\h:\w\a"
 if [ ! -z "${DEMO}" ] ; then
 	PS1="$XTERM_TITLE\u\e[37;1m@\e[0m\h:\w\n [$DEMO] \\$ "
 else
-	PS1="$XTERM_TITLE\u\e[37;1m@\e[0m\h:\w\n   \\$ "
+	PS1="\e[31;1m >> \e[0m$XTERM_TITLE\u\e[37;1m@\e[0m\h:\w\n   \\$ "
 fi
 
 # when using :sh in vim, make it clear

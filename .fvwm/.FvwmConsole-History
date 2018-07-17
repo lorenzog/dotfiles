@@ -1,0 +1,63 @@
+EdgeResistance scrolling
+EdgeResistance movement
+EdgeResistance 0 0
+EdgeThickness 2
+EdgeThickness 30
+EdgeThickness 1
+EdgeScroll 10 10
+EdgeScroll 5 5 
+EdgeScroll 1 1
+EdgeScroll 3 3
+EdgeScroll 30p 30p
+EdgeScroll 70p 70p
+DesktopSize 1x2
+DesktopSize 2x1
+DesktopSize 1x2
+Desktop 2x2
+desktop 2x2
+DesktopSize 2x2
+DesktopSize 1x2
+DesktopSize 2x2
+All MoveToScreen
+EdgeREsistance 350
+EdgeREsistance 10
+EdgeREsistance scrolling
+EdgeREsistance 0
+EdgeREsistance moving
+EdgeREsistance 0
+DesktopSize 3x3
+DesktopSize 2x3
+All MoveToScreen
+DesktopSize 1x2
+DesktopSize 2x1
+DesktopSize 1x2
+DesktopSize 1x1
+DesktopSize 1x1
+DesktopSize 1x1
+DesktopSize 1x1
+Style * Icon
+Xinerama
+XineramaSls On
+XineramaPrimaryScreen 1
+Xinerama On
+Xinerama On
+XineramaSls On
+XineramaPrimaryScreen 1
+Xinerama On
+XineramaSls Off
+EdgeScroll 100 100
+EdgeResistance 400
+EdgeResistance 450
+EdgeResistance -1
+EdgeResistance 1000
+Mouse 3 R C Module FvwmPager -transient
+DesktopSize 3x3
+Xinerama On
+XineramaSls Off
+GotoDesk 1
+GotoPage 1n 1n
+Silent Key Left A M GotoPage 1p 0p
+Silent Key Left M M GotoPage 1p 0p
+Silent Key Right M M GotoPage 1p 0p
+Silent Key Right A M GotoPage 1p 0p
+Silent Key Left A M GotoPage -1p 0p

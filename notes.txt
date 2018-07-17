@@ -186,3 +186,15 @@ fi
 ip route del "$DEST"/32
 ip route add "$DEST"/32 via $(ip route | awk '/default/ { print $3} ')
 
+
+# razer
+xinput --set-prop 10 290 0.1, 0.1
+
+
+# virtualbox shrink
+dynamic disk
+defrag
+download sdelete https://technet.microsoft.com/en-us/sysinternals/bb897443
+sdelete c: -z
+vboxmanage modifymedium --compact path-to-disk 
+

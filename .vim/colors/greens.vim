@@ -20,7 +20,7 @@ hi Visual                         guifg=Black      guibg=#C4C090      gui=NONE
 
 hi Comment     ctermfg=DarkGreen  guifg=Green
 hi Constant    ctermfg=Red        guifg=Red
-hi Special     ctermfg=DarkRed    guifg=DarkRed
+hi Special     ctermfg=DarkRed    guifg=red
 hi Identifier  ctermfg=Cyan       guifg=Cyan
 hi Statement   ctermfg=Yellow     guifg=Yellow                        gui=NONE
 hi PreProc     ctermfg=Green      guifg=Green
