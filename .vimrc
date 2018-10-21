@@ -195,4 +195,4 @@ au BufRead,BufNewFile *.aspx,*.asmx,*.ascx      set filetype=aspnet
 
 
 " show newlines
-set list
+" set list
