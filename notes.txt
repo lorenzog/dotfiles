@@ -198,3 +198,21 @@ download sdelete https://technet.microsoft.com/en-us/sysinternals/bb897443
 sdelete c: -z
 vboxmanage modifymedium --compact path-to-disk 
 
+
+# kvm connect USB: check apparmor https://help.ubuntu.com/community/KVM/Managing#Adding_USB_Device_Pass-through
+# add to /etc/apparmor.d/abstractions/libvirt-qemu
+## this lets qemu read all USB device information and might be considered a security risk
+#/run/udev/data/* r,
+
+# qemu reduce disk size
+virt-sparsify --in-place disk.qcow2
+
+# automatically resize VM in QEMU/KVM
+# install xorg spice driver then
+xrandr --output Virtual-0 --auto
+
+# notify after a while (pomodoro)
+echo 'notify-send -u critical  -i /usr/share/pixmaps/xscreensaver.xpm "Break time" "25 minutes have passed"' | at now + 25 min
+
+# iphone
+idevicepair pair

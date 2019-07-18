@@ -9,14 +9,12 @@ say() {
 	# if present
 	# if not present, use echo
 	# check stdin is opened on a terminal
-	# NOTIFY_WITH=$(test -t 0 || command -v notify-send && command -v echo)
-	# # NOTIFY_WITH=$(command -v notify-send || 'echo')
-	# test -n "$1" && "$NOTIFY_WITH" "$1"
-	notify-send "$1"
+	NOTIFY_WITH=$(test -t 0 || command -v notify-send && command -v echo)
+	# NOTIFY_WITH=$(command -v notify-send || 'echo')
+	test -n "$1" && "$NOTIFY_WITH" "$1"
 }
 
 die() {
-	# say "$1"
-	notify-send -i error "$1"
+	say "$1"
 	exit 1
 }

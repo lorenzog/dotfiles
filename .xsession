@@ -1,7 +1,8 @@
 xmodmap "/home/user/.Xmodmap"
 ~/bin/trackpad.sh
 # controls screen temperature
-redshift -l geoclue2 &
+# redshift -l geoclue2 &
+redshift -l 51.50:-0.12 &
 # don't create a new one on startup, hide all
 xpad -N -h &
 guake &
@@ -12,3 +13,4 @@ xss-lock -- xscreensaver-command -lock &
 shutter --min_at_startup &
 fdpowermon &
 exec fvwm
+# exec i3
