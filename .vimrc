@@ -172,9 +172,9 @@ autocmd BufNewFile,BufRead *.notes set syntax=markdown
 autocmd BufNewFile,BufRead *.notes set filetype=markdown
 
 " XML has 2
-autocmd FileType xml :setlocal sw=2 ts=2 sts=2 " Two spaces for XML files "
+autocmd FileType xml,html :setlocal sw=2 ts=2 sts=2 " Two spaces for XML files "
 autocmd FileType xsd :setlocal sw=2 ts=2 sts=2 " Two spaces for XML files "
-autocmd FileType xml :set noexpandtab
+autocmd FileType xml,html :set noexpandtab
 autocmd FileType xsd :set noexpandtab
 
 au BufRead,BufNewFile *.ino set syntax=arduino
@@ -196,3 +196,18 @@ au BufRead,BufNewFile *.aspx,*.asmx,*.ascx      set filetype=aspnet
 
 " show newlines
 " set list
+
+autocmd Filetype javascript set tabstop=8
+autocmd Filetype javascript set softtabstop=4
+autocmd Filetype javascript set shiftwidth=4
+autocmd Filetype javascript set expandtab		" convert tabs to spaces
+autocmd Filetype javascript set shiftround
+
+autocmd Filetype html set tabstop=8
+autocmd Filetype html set softtabstop=2
+autocmd Filetype html set shiftwidth=2
+autocmd Filetype html set expandtab		" convert tabs to spaces
+autocmd Filetype html set shiftround
+
+" set iskeyword-=_
+set nomodeline
