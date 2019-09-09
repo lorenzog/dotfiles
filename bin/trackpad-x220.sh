@@ -6,3 +6,5 @@ synclient CircularScrolling=1
 synclient RightEdge=5000
 synclient BottomEdge=4500
 synclient LeftEdge=200
+synclient VertTwoFingerScroll=1
+synclient VertScrollDelta=-10

@@ -1,0 +1,11 @@
+#!/bin/sh
+touch 'sleeping: $1' >> /tmp/sleep
+case $1 in
+ pre)
+  /sbin/ifdown eth0
+  /sbin/ifdown wlan0
+  /usr/bin/pkill openvpn
+  /usr/bin/pkill dhcpd
+  /usr/bin/pkill wpa_supplicant
+  ;;
+esac
