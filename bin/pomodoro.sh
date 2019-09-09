@@ -3,7 +3,7 @@ FOCUSTIME=25
 BREAKTIME=5
 LONGBREAK=10
 
-DISPLAY=:1.0
+DISPLAY=:0.0
 COUNT=0
 
 usage() {
@@ -16,9 +16,9 @@ is_long_break() {
 		COUNT=0
 		return
 	fi
-	# every 4 breaks, 25 min break
-	if [ $(($1 % 4)) = 0 ] ; then
-		BREAKTIME=25
+	# every 3 breaks, 20 min break
+	if [ $(($1 % 3)) = 0 ] ; then
+		BREAKTIME=20
 		COUNT=0
 	elif [ $(($1 % 2)) = 0 ] ; then
 		BREAKTIME=$LONGBREAK
