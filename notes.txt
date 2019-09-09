@@ -206,6 +206,9 @@ vboxmanage modifymedium --compact path-to-disk
 
 # qemu reduce disk size
 virt-sparsify --in-place disk.qcow2
+# resize a qcow that says 'qemu-img: Can't resize an image which has snapshots'
+qemu-img snapshot -d 1 file.qcow2
+qemu-img resize file.qcow2 +100G
 
 # automatically resize VM in QEMU/KVM
 # install xorg spice driver then
