@@ -219,3 +219,6 @@ echo 'notify-send -u critical  -i /usr/share/pixmaps/xscreensaver.xpm "Break tim
 
 # iphone
 idevicepair pair
+
+# systemd read logs
+journalctl -fe
