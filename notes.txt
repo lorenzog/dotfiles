@@ -222,3 +222,5 @@ idevicepair pair
 
 # cat to clipboard
 cat file | xclip -selection clipboard
+# systemd read logs
+journalctl -fe
