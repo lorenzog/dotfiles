@@ -1,3 +1,5 @@
+Xft.dpi:        96
+!Xft.hintstyle:  hintfull
 Xft.antialias:          1
 Xft.hinting:            1
 Xft.rgba:               rgb
@@ -5,8 +7,10 @@ Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
 URxvt*scrollBar: off
 URxvt*reverseVideo: on
-!URxvt*font: 9x15
-URxvt*font: 7x14
+!URxvt*font: xft:Code2000:antialias=false
+!URxvt*font: xft:bitstream vera sans mono:size=12:antialias=true
+URxvt*font: xft:Monospace:pixelsize=15
+!URxvt*font: 7x14
 URxvt*urgentOnBell: true
 URxvt*color0:  #000000 // black
 URxvt*color1:  #B40000 // red
