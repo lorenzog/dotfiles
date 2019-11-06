@@ -12,5 +12,6 @@ xss-lock -- xscreensaver-command -lock &
 # screenshotting
 shutter --min_at_startup &
 fdpowermon &
-exec fvwm
+# exec fvwm
 # exec i3
+exec xfce4
