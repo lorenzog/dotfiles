@@ -224,3 +224,15 @@ idevicepair pair
 cat file | xclip -selection clipboard
 # systemd read logs
 journalctl -fe
+
+# ext4 encryption
+tune2fs -O encrypt <disk>
+fscrypt status
+# one-off
+fscrypt setup
+fscrypt encrypt dir --user=username
+# lock
+fscrypt purge dir --user=username
+# decrypt
+fscrypt unlock dir --user=username
+
