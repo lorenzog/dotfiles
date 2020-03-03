@@ -147,6 +147,7 @@ gsettings set org.gnome.desktop.media-handling automount-open false
 gsettings set org.gnome.desktop.media-handling automount false
 
 systemctl list-units --state=failed
+systemctl list-unit-files --state=failed
 journalctl --list-boots
 
 # see mouse position
@@ -236,3 +237,15 @@ fscrypt purge dir --user=username
 # decrypt
 fscrypt unlock dir --user=username
 
+firejail --dns=dns1 executable
+
+# show start time of process
+ps axfwweo pid,lstart,cmd 
+
+git remote set-url origin git@github.com:lorenzog/repo.git
+
+# read license from bios
+sudo xxd /sys/firmware/acpi/tables/MSDM
+
+# rdp dynamic resolution adjust on the fly
+xfreerdp /v:IP /dynamic-resolution /u:user
