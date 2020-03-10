@@ -2,6 +2,8 @@
 touch 'sleeping: $1' >> /tmp/sleep
 case $1 in
  pre)
+  pkill synergyc
+  pkill synergys
   /sbin/ifdown eth0
   /sbin/ifdown wlan0
   /sbin/ifdown wlan1
