@@ -9,7 +9,18 @@ URxvt*scrollBar: off
 URxvt*reverseVideo: on
 !URxvt*font: xft:Code2000:antialias=false
 !URxvt*font: xft:bitstream vera sans mono:size=12:antialias=true
-URxvt*font: xft:Monospace:pixelsize=15
+!URxvt*font: xft:Monospace:pixelsize=15
+! **this works in kali
+URxvt*font: xft: Unifont:antialias=true,xft: Unifont Upper:pixelsize=15:antialias=true:pixelsize=15
+!fallback to xterm, antialias=false means no utf
+xterm*faceName: Unifont:size=14:antialias=false
+xterm*faceSize: 14
+xterm*boldFaceName: Unifont:size=14
+xterm*reverseVideo: on
+xterm*scrollBar: off
+xterm*renderFont: false
+XTerm*font: 8x15
+XTerm*utf8: 1
 !URxvt*font: 7x14
 URxvt*urgentOnBell: true
 URxvt*color0:  #000000 // black

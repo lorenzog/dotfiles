@@ -249,3 +249,19 @@ sudo xxd /sys/firmware/acpi/tables/MSDM
 
 # rdp dynamic resolution adjust on the fly
 xfreerdp /v:IP /dynamic-resolution /u:user
+
+# nfs with firewall
+# https://askubuntu.com/a/104232
+RPCMOUNTDOPTS="-p 13025" # in /etc/default/nfs-
+
+# efi
+gparted (or fdisk, but add bootable and large file)
+better < 4gb
+format vfat
+7z x isofile.iso -o/mnt/foo
+
+# font
+fc-list : family
+fc-list
+gucharmap
+fc-cache -f -v # clean cache

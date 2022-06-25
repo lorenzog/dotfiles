@@ -3,7 +3,7 @@ FOCUSTIME=25
 BREAKTIME=5
 LONGBREAK=10
 
-DISPLAY=:0.0
+DISPLAY=:1.0
 COUNT=0
 
 usage() {
@@ -54,6 +54,7 @@ case "$1" in
 		xmessage -buttons Ok:0,Stop:1 -timeout 0 "Focus time: ${FOCUSTIME} min" -nearmouse || exit
 		notify-send -i /usr/share/pixmaps/xscreensaver.xpm "Focus starts now" "Break is in ${FOCUSTIME} minutes"
 		# schedule a break in 25 minutes
+		COUNT=$((COUNT+1))
 		echo "~/bin/pomodoro.sh break $((COUNT+1)) ${DISPLAY}" | at -M now + "${FOCUSTIME}" min
 		;;
 	"break")
@@ -61,6 +62,7 @@ case "$1" in
 		# test -n "$2" && BREAKTIME="$2"
 		xmessage -buttons Ok:0,Stop:1 -timeout 0 "Break time: ${BREAKTIME} min" -nearmouse || exit
 		# schedule a focus in 10 minutes
+		COUNT=$((COUNT+1))
 		echo "~/bin/pomodoro.sh focus $((COUNT+1)) ${DISPLAY}" | at -M now + "${BREAKTIME}" min
 		# notify when focus is
 		notify-send -i /usr/share/pixmaps/xscreensaver.xpm "Break time" "Focus is in ${BREAKTIME} minutes"
