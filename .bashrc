@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    screen-* | xterm-color | screen-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -62,7 +62,7 @@ alias ll='ls -laFh'
 alias l='ls -aF'
 alias lt='ls -lctr'
 
-unset color_prompt force_color_prompt
+# unset color_prompt force_color_prompt
 export EDITOR='/usr/bin/vim'
 shopt -s cdspell
 export LANGUAGE=$LANG
@@ -164,3 +164,5 @@ PERL5LIB="/home/user/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/user/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/user/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/user/perl5"; export PERL_MM_OPT;
+
+alias python='python3'
