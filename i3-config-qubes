@@ -94,7 +94,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal in the domain of the currently active window
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec qubes-i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -155,9 +155,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:name"
-set $ws2 "2"
-set $ws3 "3"
+set $ws1 "1:chat"
+set $ws2 "2:life"
+set $ws3 "3:www"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -240,7 +240,7 @@ bindsym $mod+p move workspace to output next
 # finds out, if available)
 bar {
 position top
-        status_command i3status
+        status_command qubes-i3status
         colors {
             # background #d2d2d2
             # statusline #333333
@@ -256,7 +256,7 @@ position top
 
 # Make sure all xdg autostart entries are started, this is (among other things)
 # necessary to make sure transient vm's come up
-exec --no-startup-id i3-xdg-autostart
+exec --no-startup-id qubes-i3-xdg-autostart
 
 # bindsym XF86Display exec --no-startup-id xrandr --auto
 set $mode_display Ext Screen (a) ALL ON (h) HDMI UP (x) HDMI LEFT (l) HDMI OFF (0) INTERNAL OFF (9) INTERNAL ON
@@ -283,8 +283,8 @@ bindsym $mod+x [urgent=latest] focus
 bindsym Print exec /home/user/bin/screenshot.sh
 
 for_window [title="Tor Browser"] floating enable
+for_window [title="Qubes Update"] floating enable
 for_window [title="Screen Layout Editor"] floating enable
-for_window [class="xpad"] floating enable
 
 # press same workspace number to go back where you came from
 workspace_auto_back_and_forth yes
@@ -293,5 +293,5 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
 
 # 
-exec --no-startup-id ~/bin/normalkeyboard.sh
-exec --no-startup-id ~/bin/scrolling.sh
+exec --no-startup-id /home/user/bin/normalkeyboard.sh
+exec --no-startup-id /home/user/bin/scrolling.sh
