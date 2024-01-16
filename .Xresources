@@ -77,3 +77,5 @@ URxvt*urgentOnBell: true
 ! URxvt*color14: #00FFFF // cyan
 ! URxvt*color15: #FFFFFF // white
 URxvt.perl-ext-common: selection-to-clipboard
+
+URxvt.color12: #609eff
