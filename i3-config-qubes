@@ -25,7 +25,7 @@ font pango:monospace 12
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -f -c 0f000f
-exec --no-startup-id xss-lock --transfer-sleep-lock -- xscreensaver & 
+exec --no-startup-id xss-lock --transfer-sleep-lock -- xscreensaver-command -lock &
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
@@ -259,12 +259,15 @@ position top
 exec --no-startup-id qubes-i3-xdg-autostart
 
 # bindsym XF86Display exec --no-startup-id xrandr --auto
-set $mode_display Ext Screen (a) ALL ON (h) HDMI UP (x) HDMI LEFT (l) HDMI OFF (0) INTERNAL OFF (9) INTERNAL ON
+set $mode_display Ext Screen (a) ALL ON (h) HDMI UP (l) HDMI LEFT (u) USB-C left (x) HDMI OFF (0) INTERNAL OFF (9) INTERNAL ON
 mode "$mode_display" {
 	bindsym a exec --no-startup-id xrandr --auto, mode "default"
 	bindsym h exec --no-startup-id xrandr --output HDMI-2 --auto --primary --above eDP-1, mode "default"
 	bindsym l exec --no-startup-id xrandr --output HDMI-2 --auto --primary --left-of eDP-1, mode "default"
-	bindsym x exec --no-startup-id xrandr --output HDMI-2 --auto --off, mode "default"
+	# bindsym u exec --no-startup-id xrandr --output DP-1 --auto --primary --left-of eDP-1, mode "default"
+	bindsym u exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --pos 1080x0 --rotate normal --output DP-1 --primary --mode 1920x1080 --pos 0x0 --rotate left, mode "default" 
+
+	bindsym x exec --no-startup-id xrandr --output HDMI-2 --auto --off --output DP-1 --auto --off, mode "default"
 	bindsym 0 exec --no-startup-id xrandr --output eDP-1 --off, mode "default" 
 	bindsym 9 exec --no-startup-id xrandr --output eDP-1 --auto, mode "default" 
         bindsym Return mode "default"
@@ -285,6 +288,7 @@ bindsym Print exec /home/user/bin/screenshot.sh
 for_window [title="Tor Browser"] floating enable
 for_window [title="Qubes Update"] floating enable
 for_window [title="Screen Layout Editor"] floating enable
+for_window [class="tech:xpad"] floating enable
 
 # press same workspace number to go back where you came from
 workspace_auto_back_and_forth yes
@@ -295,3 +299,6 @@ bindsym $mod+Shift+minus move scratchpad
 # 
 exec --no-startup-id /home/user/bin/normalkeyboard.sh
 exec --no-startup-id /home/user/bin/scrolling.sh
+exec --no-startup-id xscreensaver &
+exec --no-startup-id qvm-features dom0 gui-videoram-min 36900
+exec --no-startup-id /usr/lib64/xfce4/notifyd/xfce4-notifyd &
