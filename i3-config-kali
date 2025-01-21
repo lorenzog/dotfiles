@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -28,7 +28,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -f -c 0f000f
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- xscreensaver & 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -40,6 +41,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +20% 
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 20%-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -63,10 +67,10 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -75,10 +79,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -115,9 +119,9 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
+set $ws2 "2: notes"
+set $ws3 "3: web"
+set $ws4 "4: VM"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -125,6 +129,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+bindsym $mod+Control+Right workspace next
+bindsym $mod+Control+Left workspace prev
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -183,8 +189,76 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# mode "output" {
+# 	bindsym $mod+Up move workspace to output next
+# 
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+#         bindsym $mod+p mode "default"
+# }
+# bindsym $mod+p mode "output"
+bindsym $mod+p move workspace to output next
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+position top
         status_command i3status
 }
+
+# Make sure all xdg autostart entries are started, this is (among other things)
+# necessary to make sure transient vm's come up
+exec --no-startup-id i3-xdg-autostart
+
+# bindsym XF86Display exec --no-startup-id xrandr --auto
+set $mode_display Ext Screen (a) ALL ON (h) HDMI UP (x) HDMI LEFT (l) HDMI OFF (0) INTERNAL OFF (9) INTERNAL ON
+mode "$mode_display" {
+	bindsym a exec --no-startup-id xrandr --auto, mode "default"
+	bindsym h exec --no-startup-id xrandr --output HDMI-2 --auto --primary --above eDP-1, mode "default"
+	bindsym l exec --no-startup-id xrandr --output HDMI-2 --auto --primary --left-of eDP-1, mode "default"
+	bindsym x exec --no-startup-id xrandr --output HDMI-2 --auto --off, mode "default"
+	bindsym 0 exec --no-startup-id xrandr --output eDP-1 --off, mode "default" 
+	bindsym 9 exec --no-startup-id xrandr --output eDP-1 --auto, mode "default" 
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+# bindsym XF86Tools mode "$mode_display"
+bindsym XF86Display mode "$mode_display"
+
+# bindsym $mod+l exec --no-startup-id i3lock -f -c 0f000f
+bindsym $mod+l exec --no-startup-id xscreensaver-command -lock
+# bindsym $mod+p exec --no-startup-id arandr
+
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+bindsym $mod+z workspace back_and_forth
+bindsym $mod+x [urgent=latest] focus
+# bindsym Print exec /home/user/bin/screenshot.sh
+bindsym Print exec xfce4-screenshooter -c -r &
+
+for_window [title="Tor Browser"] floating enable
+for_window [title="Screen Layout Editor"] floating enable
+for_window [class="xpad"] floating enable
+# for_window [class="obsidian"]  move to workspace $ws2
+assign [class="obsidian"]  number 2
+# for_window [class="Brave-browser"]  move to workspace $ws3
+assign [class="Brave-browser"]  $ws3
+for_window [class="Brave-browser"]  layout tabbed
+# for_window [class="Google-chrome"]  move to workspace $ws3
+assign [class="Google-chrome"]  $ws3
+for_window [class="Google-chrome"]  layout tabbed
+# for_window [class="VirtualBox Manager"]  move to workspace $ws4
+# for_window [class="VirtualBox Manager"]  move to workspace $ws4
+
+# press same workspace number to go back where you came from
+workspace_auto_back_and_forth yes
+
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+minus move scratchpad
+
+# 
+exec --no-startup-id xscreensaver & 
+exec --no-startup-id ~/bin/normalkeyboard.sh
+exec --no-startup-id ~/bin/scrolling.sh
+exec --no-startup-id xfce4-clipman
+exec --no-startup-id ~/bin/trackpad-t480.sh
+exec --no-startup-id blueman-applet
