@@ -81,7 +81,7 @@ set mouse=a
 " set mouse-=a to select with mouse
 "set ttymouse=xterm
 " yank to system clipboard
-" set clipboard=unnamed,unnamedplus
+set clipboard=unnamed,unnamedplus
 " fix in tmux 
 " see http://bombayrain.posterous.com/tmux-and-vim-configuration
 " don't forget to do ':setw -g xterm-keys on' in tmux
@@ -167,6 +167,8 @@ autocmd FileType python set list
 autocmd FileType python set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 autocmd BufNewFile,BufRead *.jsp set syntax=java
+
+autocmd BufNewFile,BufRead *.nmap set syntax=nmap
 
 autocmd BufNewFile,BufRead *.notes set syntax=markdown
 autocmd BufNewFile,BufRead *.notes set filetype=markdown

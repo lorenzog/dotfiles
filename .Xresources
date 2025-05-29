@@ -15,6 +15,8 @@ Xft.dpi:        96
 ! !! blue dark/light
 ! *color4: #268bd2
 ! *color12: #839496
+! urxvt colour for directories
+*color12: #839496
 ! !! magenta dark/light
 ! *color5: #d33682
 ! *color13: #6c71c4
@@ -77,5 +79,10 @@ URxvt*urgentOnBell: true
 ! URxvt*color14: #00FFFF // cyan
 ! URxvt*color15: #FFFFFF // white
 URxvt.perl-ext-common: selection-to-clipboard
+xterm*selectToClipboard: true
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 URxvt.color12: #609eff
