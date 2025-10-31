@@ -214,4 +214,4 @@ autocmd Filetype html set shiftround
 " set iskeyword-=_
 set nomodeline
 
-set guifont=Monospace\ 14
+set guifont=Monaco:h18
