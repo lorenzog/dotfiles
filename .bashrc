@@ -148,16 +148,15 @@ export SUDO_ASKPASS=/usr/bin/ssh-askpass
 # save previous location:
 # for the meaning of <>
 # https://unix.stackexchange.com/a/164394
-cd $(<>/dev/shm/$USER-pwd)
-__cd(){
-    # use \cd to avoid a fork bomb
-    \cd "$@"
-    pwd >/dev/shm/$USER-pwd
-}
-alias cd=__cd
-alias yolo='sudo'
+# cd $(<>/dev/shm/$USER-pwd)
+# __cd(){
+#     # use \cd to avoid a fork bomb
+#     \cd "$@"
+#     pwd >/dev/shm/$USER-pwd
+# }
+# alias cd=__cd
 # open in previous location
-cd "$(cat /dev/shm/$USER-pwd)"
+# cd "$(cat /dev/shm/$USER-pwd)"
 
 PATH="/home/user/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/user/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -167,3 +166,7 @@ PERL_MM_OPT="INSTALL_BASE=/home/user/perl5"; export PERL_MM_OPT;
 
 alias python='python3'
 alias lt='ls -larth'
+#
+export PATH=/opt/homebrew/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# docker
+export PATH=$PATH:$HOME/.docker/bin/:$HOME/Library/Python/3.9/bin
