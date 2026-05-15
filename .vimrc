@@ -215,3 +215,6 @@ autocmd Filetype html set shiftround
 set nomodeline
 
 set guifont=Monaco:h18
+
+" life saving - ignore whitespace when diffing
+set diffopt+=iwhite
