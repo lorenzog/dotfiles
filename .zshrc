@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # docker
-export PATH=$PATH:$HOME/.docker/bin/
+export PATH=$PATH:$HOME/.docker/bin/:$HOME/Library/Python/3.9/bin
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -107,3 +107,12 @@ source $ZSH/oh-my-zsh.sh
 
 # to background jobs
 setopt no_hup
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh   
+setopt no_share_history
+unsetopt share_history
+setopt inc_append_history
+PROMPT='%F{cyan}%n%f@%F{green}%m%f %F{yellow}%~%f %# '
+# don't glob for scp ..*
+setopt nonomatch
